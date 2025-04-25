@@ -165,7 +165,10 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="noice.jpg"
+                src="https://res.cloudinary.com/dtchcrwn9/image/upload/noice_posail.jpg
+
+
+"
                 alt="Coding workspace"
                 className="rounded-lg shadow-xl"
               />
