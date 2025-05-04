@@ -52,6 +52,18 @@ function App() {
     linkedin: {
       command: 'connect --user "Kartikeya Singh"',
       url: 'https://www.linkedin.com/in/singhkartikeya28/'
+    },
+    leetcode: {
+      command: "view --u k-arsyn28",
+      url: "https://www.leetcode.com/u/k-arsyn28/"
+    },
+    codechef: {
+      command: "view --u kartikey_sen",
+      url: "https://www.codechef.com/users/kartikeya28_12"
+    },
+    codeforces: {
+      command: "view --cp kartikey_sen",
+      url: "https://codeforces.com/profile/kartikeya_sen"
     }
   };
 
@@ -132,6 +144,39 @@ function App() {
                 >
                   LinkedIn
                 </button>
+
+                <button
+                  onClick={() => setActiveTab('leetcode')}
+                  className={`px-6 py-3 text-sm font-medium ${
+                    activeTab === 'leetcode'
+                      ? 'text-blue-400 border-b-2 border-blue-400'
+                      : 'text-gray-400 hover:text-gray-300'
+                  }`}
+                >
+                  LeetCode
+                </button>
+
+                <button
+                  onClick={() => setActiveTab('codechef')}
+                  className={`px-6 py-3 text-sm font-medium ${
+                    activeTab === 'codechef'
+                      ? 'text-blue-400 border-b-2 border-blue-400'
+                      : 'text-gray-400 hover:text-gray-300'
+                  }`}
+                >
+                  Codechef
+                </button>
+
+                <button
+                  onClick={() => setActiveTab('codeforces')}
+                  className={`px-6 py-3 text-sm font-medium ${
+                    activeTab === 'codeforces'
+                      ? 'text-blue-400 border-b-2 border-blue-400'
+                      : 'text-gray-400 hover:text-gray-300'
+                  }`}
+                >
+                  Codeforces
+                </button>
               </div>
 
               {/* Command Interface */}
@@ -140,11 +185,14 @@ function App() {
                   <span className="text-green-400">➜</span>
                   <span className="text-purple-400">~</span>
                   <span className="text-gray-300 font-mono">
-                    {activeTab === 'github' ? socialLinks.github.command : socialLinks.linkedin.command}
+                    {/* {activeTab === 'github' ? socialLinks.github.command : socialLinks.linkedin.command} */
+                    socialLinks[activeTab].command
+                    }
                   </span>
                 </div>
                 <a
-                  href={activeTab === 'github' ? socialLinks.github.url : socialLinks.linkedin.url}
+                  href={socialLinks[activeTab].url}
+
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-md transition-colors duration-200 flex items-center space-x-2"
