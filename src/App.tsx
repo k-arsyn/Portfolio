@@ -31,6 +31,18 @@ function App() {
       github: "https://github.com/aristocrat71/Bone.ai",
     },
     {
+      title: "RunRt",
+      description: "A real-time, distributed polling and voting platform built with Spring Boot microservices, Apache Kafka, Redis, WebSockets, and Spring Cloud Gateway. The system demonstrates modern event-driven architecture, JWT-based security, and live result streaming.",
+      tech: ["SpringBoot", "Kafka", "Redis" , "Zipkin" , "PostgreSQL"],
+      github: "https://github.com/k-arsyn/RunRt",
+    },
+    {
+      title: "Attendance Tracker",
+      description: "Web App to track Attendance.",
+      tech: ["Express", "React.js"],
+      github: "https://github.com/k-arsyn/atttendance-tracker",
+    },
+    {
       title: "Parking Lot Management System",
       description: "This C++ program simulates a Parking Area Management System. The system allows users to park, unpark, and search for cars based on various criteria such as registration number, parking slot, or car color.",
       tech: ["C++", "OOPs"],
